@@ -34,7 +34,7 @@ if (isset($_POST["submitEnb"])) {
         $args_data = "send_frame_size=512,recv_frame_size=512";
     }
 
-    $enb_data = "[enb]\nenb_id = $enb_id\nmcc = $mcc_enb\nmnc = $mnc_enb\nmme_addr = $enb_mme_addr\ngtp_bind_addr = $enb_gtp_bind_addr\ns1c_bind_addr = $enb_s1c_bind_addr\ns1c_bind_port = $enb_s1c_bind_port\nn_prb = $n_prb\ntm = $tm\nnof_ports = $nof_ports\n\n[enb_files]\nsib_config = sib.conf\nrr_config  = rr.conf\nrb_config = rb.conf\n\n[rf]\ndl_earfcn = $rf_dl_earfcn\ntx_gain = $rf_tx_gain\nrx_gain = $rf_rx_gain\ndevice_name = $rf_device_name\ndevice_args = $args_data \n\n[pcap]\n\n[log]\nall_level = debug\nall_hex_limit = 32\nfilename = /tmp/enb.log\nfile_max_size = -1\n\n[gui]\nenable = $gui_enabled";
+    $enb_data = "[enb]\nenb_id = $enb_id\nmcc = $mcc_enb\nmnc = $mnc_enb\nmme_addr = $enb_mme_addr\ngtp_bind_addr = $enb_gtp_bind_addr\ns1c_bind_addr = $enb_s1c_bind_addr\ns1c_bind_port = $enb_s1c_bind_port\nn_prb = $n_prb\ntm = $tm\nnof_ports = $nof_ports\n\n[enb_files]\nsib_config = sib.conf\nrr_config  = rr.conf\nrb_config = rb.conf\n\n[rf]\ndl_earfcn = $rf_dl_earfcn\ntx_gain = $rf_tx_gain\nrx_gain = $rf_rx_gain\ndevice_name = $rf_device_name\n#device_args = $args_data \n\n[pcap]\n\n[log]\nall_level = debug\nall_hex_limit = 32\nfilename = /tmp/enb.log\nfile_max_size = -1\n\n[gui]\nenable = $gui_enabled";
 
     $file_enb = "/etc/srsran/enb.conf";
     $handler_enb = fopen($file_enb, "w");
@@ -136,7 +136,7 @@ if (isset($_POST["submitEnb"])) {
             </select>
         </div>
         <br>
-        <div class="flex">
+      <!--  <div class="flex">
             <label for="device_args" class="input__label" style="width: 50%;">Device Args</label>
             <select name="device_args" class="input input__select" id="device_args">
                 <option value="25prb">25 PRB</option>
@@ -144,7 +144,7 @@ if (isset($_POST["submitEnb"])) {
             </select>
         </div>
         <br>
-
+	-->
         <h3>GUI</h3>
         <div class="flex">
             <label for="enabled" class="input__label" style="width: 50%;">Enabled : </label>
