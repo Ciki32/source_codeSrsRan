@@ -1,4 +1,4 @@
-Aktifasi WEB_GUI_SrsRAN, Ketikan perintah berikut di terminal !
+Aktifasi Setup SrsRAN, Ketikan perintah berikut di terminal !
 
 - Cd source_codeSrsRAN
 - chmod +x setup_srsran.sh
