@@ -1,12 +1,9 @@
 
 sudo chmod +x GUISrsRAN.sh
-echo "OK"
 
 sudo chmod +x run_srsran.sh
-echo "OK"
 
 sudo chmod +x stop_srsran.sh
-echo "OK"
 
 echo "Setup SrsRAN Selesai!"
 
